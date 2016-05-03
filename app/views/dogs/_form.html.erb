@@ -8,7 +8,7 @@
     <%= f.input :info %>
     <%= f.association :breed %>
     <%= f.association :owner %>
-    <%= f.association :vet %>
+    <%= f.association :vet, collection: Vet.order(:doctor), label_method: :doctor %>
   </div>
 
   <div class="form-actions">
